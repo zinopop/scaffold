@@ -1,20 +1,3 @@
-Tatyana（Docker + Nginx + MySQL + PHP7/5 + Redis + ElasticSearch）是一款全功能的**LNMP一键安装程序**。
-
-Tatyana项目特点：
-1. `100%`开源
-2. `100%`遵循Docker标准
-3. 支持**多版本PHP**共存，可任意切换（PHP5.6、PHP7.2)
-4. 支持绑定**任意多个域名**
-5. 支持**HTTPS和HTTP/2**
-6. **PHP源代码、MySQL数据、配置文件、日志文件**都可在Host中直接修改查看
-7. 内置**完整PHP扩展安装**命令
-8. 默认安装`pdo_mysql`、`redis`、`xdebug`、`swoole`等常用热门扩展，拿来即用
-9. 内置 `Hprose` 官方编译版本
-9. 带有phpmyadmin和phpredisadmin数据库在线管理程序
-10. 实际项目中应用，确保`100%`可用
-11. 一次配置，**Windows、Linux、MacOs**皆可用
-
-
 # 目录
 - [1.目录结构](#1目录结构)
 - [2.快速使用](#2快速使用)
@@ -53,17 +36,11 @@ Tatyana项目特点：
 └── source.list             Debian源文件
 ```
 结构示意图：
-
-![Demo Image](./dnmp.png)
-
-
-
-
 ## 2.快速使用
 1. 本地安装`git`、`docker`和`docker-compose`。
 2. `clone`项目：
     ```
-    $ git clone ssh://git@gitlab.wxzxzj.com:22222/downend/Tatyana.git
+    $ git clone https://github.com/zinopop/scaffold.git
     ```
 3. 如果不是`root`用户，还需将当前用户加入`docker`用户组：
     ```
@@ -75,7 +52,7 @@ Tatyana项目特点：
     
 5. 拷贝环境配置文件`env.sample`为`.env`，启动：
     ```
-    $ cd Tatyana
+    $ cd scaffold
     $ cp env.sample .env   # Windows系统请用copy命令，或者用编辑器打开后另存为.env
     $ docker-compose up
     ```
