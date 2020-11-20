@@ -23,7 +23,7 @@ RUN chmod +x /tmp/extensions/install.sh \
     && /tmp/extensions/install.sh \
     && rm -rf /tmp/extensions
 
-RUN curl -sS https://getcomposer.org/installer | php \
+RUN curl -sS https://install.phpcomposer.com/installer | php \
     && mv composer.phar /usr/local/bin/composer \
     && composer config -g repo.packagist composer https://packagist.phpcomposer.com
 
