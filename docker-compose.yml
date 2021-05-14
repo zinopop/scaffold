@@ -39,7 +39,7 @@ services:
     networks:
       - default
     ports:
-      - "${RPC_SERVER_PORT}:9090"
+      - "${RPC_SERVER_PORT}:9092"
     environment: 
       - TZ=Asia/Shanghai
 
@@ -85,6 +85,7 @@ services:
   redis:
     image: bitnami/redis:${REDIS_VERSION}
     container_name: redis
+    privileged: true
     ports:
       - "${REDIS_HOST_PORT}:6379"
     environment:
@@ -93,8 +94,8 @@ services:
     restart: always
     networks:
       - default
-    volumes:
-      - ${REDIS_DATA_DIR}:/bitnami/redis/data
+#    volumes:
+#      - ${REDIS_DATA_DIR}:/bitnami/redis/data
     deploy:
       resources:
         limits:

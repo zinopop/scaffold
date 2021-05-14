@@ -1,2 +1,6 @@
 /.idea
 .idea
+www/
+mysql/
+redis/
+.env
